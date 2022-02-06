@@ -1,6 +1,70 @@
 <html>
 <main>
     <link rel="stylesheet" href="styles.css">
+    <script>
+var input=document.createElement("INPUT");
+var content1=document.getElementById("content1");
+content1.appendChild(input);
+content1.style.display="flex";
+input.setAttribute("type","email");
+input.setAttribute("id","input");
+var label=document.createElement("LABEL");
+input.appendChild(label);
+label.innerText="Email Address";
+label.setAttribute("class","placeLabel");
+label.setAttribute("for","input");
+
+
+
+
+
+var button1=document.createElement("button");
+button1.style.width="200px"
+button1.innerText="Get Started >";
+content1.appendChild(button1);
+button1.style.border="none";
+input.style.border="none";
+button1.style.backgroundColor="red";
+button1.style.color="white";
+button1.style.fontSize="25px";
+button1.style.cursor="pointer";
+var p1 = document.createElement("p");
+var body=document.getElementById("body");
+function check()
+{
+  console.log(input.value);
+  if(input.value=="")
+    {
+      console.log("fired");
+      p1.innerText="Email Address is required";
+   body.appendChild(p1);
+      input.style.borderBottom = "2px solid #F89B09";
+    }
+  else if(!  input.value.includes("@"))
+    {
+  p1.innerText="Please enter a valid Email Address";
+  body.appendChild(p1);
+      input.style.borderBottom = "2px solid #F89B09";
+    }
+  else if(input.value.includes("@"))
+    {
+     p1.innerText="";
+    body.appendChild(p1);  location.replace("https://www.netflix.com/in/login");
+    }
+  
+}
+button1.addEventListener("click",check);
+
+
+const log = document.getElementById('value');
+
+input.addEventListener('input', updateValue);
+
+function updateValue(e) {
+ input.value = e.target.value;
+ console.log(input.value)
+}
+</script>
 <head>
 <nav>
   <div id="top">
