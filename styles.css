@@ -11,7 +11,9 @@ main{
   height:700px;
   border-bottom: 8px solid #222;
 }
-
+#content1 input{
+  height:70px;
+}
 nav{
   margin-top:-25px;
 }
